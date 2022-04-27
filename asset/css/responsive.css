@@ -1,0 +1,124 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px){
+    
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        background-color: var(--white-color);
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+    .header{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        top: 0;
+    }
+    .header__cart-list::after{
+        display: none;
+    }
+    .app__container{
+        margin-top: calc(var(--header-height) + var(--header-sort-bar));
+    }
+    .header__sort-bar{
+        display: flex;
+    }
+
+    .app__content {
+        padding-top: 8px;
+    }
+
+    .mobile-category{
+        display: block;
+    }
+
+}
+
+/*Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    :root{
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+    .hide-on-tablet{
+        display: none;
+    }
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+}
+
+/* Mobile*/
+@media (max-width: 739px){
+    :root{
+        --header-height: 56px;
+        --navbar-height: 0px;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    .header-with-search{
+        justify-content: space-between;
+    }
+    .header__cart,
+    .header__logo{
+        width: unset;
+    }
+    
+    .nav__bars-btn{
+        display: flex;
+    }
+    .header__search{
+        position: fixed;
+        top: 66px;
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+        z-index: 1;
+        padding: 0 8px;
+        animation: SideIn linear 0.3s;
+        display: none;
+    }
+    .pagination-item{
+        margin: 0;
+    }
+    .pagination-item__link{
+        font-size: 1.6rem;
+        height: 28px;
+        min-width: 36px;
+    }
+    .app__container{
+        padding: 0 8px;
+    }
+    .footer__padding{
+        padding: 0 16px;
+    }
+    .footer__heading{
+        text-align: center;
+    }
+    .footer-item__link{
+        justify-content: center;
+    }
+    .footer__download{
+        justify-content: center;
+    }
+
+    @keyframes SideIn {
+        from{
+            opacity: 0;
+            top: 33px;
+        }
+        to {
+            opacity: 1;
+            top: 66px;
+        }
+    }
+    
+    
+}
